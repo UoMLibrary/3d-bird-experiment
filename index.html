@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eskimo Curlew — Manchester Museum</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/addons/"
+  }
+}
+</script>
+</head>
+<body>
+
+<canvas id="scene"></canvas>
+
+<button id="splash">
+  <img src="images/curlew-illustration.png" width="682" height="491"
+       alt="Illustration of an Eskimo Curlew standing in profile">
+  <span class="splash-caption">
+    <span class="splash-name">Eskimo Curlew</span>
+    <span class="splash-latin"><em>Numenius borealis</em></span>
+    <span class="splash-prompt" id="splash-prompt">Preparing the specimen&hellip;</span>
+  </span>
+</button>
+
+<div id="loader">
+  <div class="loader-inner">
+    <p class="loader-title">Eskimo Curlew</p>
+    <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
+    <p class="loader-status" id="loader-status">Loading model…</p>
+  </div>
+</div>
+
+<header id="titlebar">
+  <h1>Eskimo Curlew</h1>
+  <p class="latin"><em>Numenius borealis</em></p>
+</header>
+
+<button id="info-toggle" title="About this model" aria-expanded="false">i</button>
+
+<aside id="info" hidden>
+  <h2>About</h2>
+  <p>
+    The Eskimo Curlew was once one of the most numerous shorebirds in North America.
+    Market hunting and the loss of its prairie stopover habitat collapsed the population
+    in the late nineteenth century. The last confirmed sighting was in 1963, and the
+    species is now presumed extinct.
+  </p>
+  <p>
+    This is a photogrammetry scan of a mounted specimen in the collection of Manchester
+    Museum, decimated from 3.6&nbsp;million to roughly 178,000 triangles for the web,
+    with a 4K colour texture.
+  </p>
+  <h2>Credit</h2>
+  <p>
+    Model by <strong>The John Rylands Library</strong>, licensed
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC&nbsp;BY&nbsp;4.0</a>.
+    <a href="https://sketchfab.com/3d-models/manchester-museum-eskimo-curlew-71ff04c5b30a4f95a5ae957379d940e3" target="_blank" rel="noopener">View the original on Sketchfab</a>.
+  </p>
+  <h2>Controls</h2>
+  <ul>
+    <li><span>Drag</span> orbit</li>
+    <li><span>Scroll</span> zoom</li>
+    <li><span>Right-drag</span> pan</li>
+    <li><span>Space</span> auto-rotate</li>
+    <li><span>P</span> illustration / scan</li>
+    <li><span>L</span> lighting</li>
+    <li><span>W</span> wireframe</li>
+    <li><span>F</span> fullscreen</li>
+    <li><span>R</span> reset view</li>
+  </ul>
+</aside>
+
+<div id="texture" role="radiogroup" aria-label="Surface texture">
+  <button type="button" data-mode="illustration" role="radio" aria-checked="true" class="on">Illustration</button>
+  <button type="button" data-mode="sketchfab" role="radio" aria-checked="false">Sketchfab</button>
+</div>
+
+<p id="hint">Drag to orbit &middot; scroll to zoom</p>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
